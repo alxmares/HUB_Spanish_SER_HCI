@@ -73,15 +73,22 @@
         }
 
         .card a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             text-decoration: none;
             color: #333;
+            height: 100%;
+            width: 100%;
             font-size: 1.1em;
             font-weight: 500;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card span {
             padding: 20px;
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            text-align: center;
         }
         
         .related-section {
@@ -200,17 +207,26 @@
 
     <div class="container">
         <div class="card">
+        <a href="https://alxmares.github.io/Spanish_Speech_Emotion_Recognition/" target="_blank">
             <img src="assets/ser.png" alt="SER">
-            <a href="https://alxmares.github.io/Spanish_Speech_Emotion_Recognition/">Speech Emotion Recognition</a>
+            <span>Speech Emotion Recognition</span>
+        </a>
         </div>
+
         <div class="card">
+        <a href="https://alxmares.github.io/Spanish_Emotional_TTS/" target="_blank">
             <img src="assets/tts.jpg" alt="TTS">
-            <a href="https://alxmares.github.io/Spanish_Emotional_TTS/">Text-to-Speech Synthesis</a>
+            <span>Text-to-Speech Synthesis</span>
+        </a>
         </div>
+
         <div class="card">
+        <a href="https://alxmares.github.io/Spanish_Emphatic_HCI/" target="_blank">
             <img src="assets/hci.png" alt="HCI">
-            <a href="https://alxmares.github.io/Spanish_Emphatic_HCI/">Empathic HCI System</a>
+            <span>Empathic HCI System</span>
+        </a>
         </div>
+
     </div>
 
     <div class="related-section">
