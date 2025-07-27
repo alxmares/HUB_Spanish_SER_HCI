@@ -33,7 +33,8 @@
         .subtitle {
             font-size: 1.2em;
             color: #666;
-            margin-bottom: 40px;
+            margin-top: 0px;
+            margin-bottom: 0px;
             text-align: center;
             align-items: center;
             }
@@ -51,7 +52,7 @@
             border-radius: 16px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             width: 260px;
-            height: 280px;
+            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -82,7 +83,7 @@
             color: #333;
             height: 100%;
             width: 100%;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: 500;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -131,48 +132,100 @@
         max-width: 800px;
         border: none;
         border-top: 1px solid #ddd;
-        margin: 0px auto 30px auto;
+        margin: 0px auto 5px auto;
         }
 
         footer {
-            background-color: #ffffff;
-            border-top: 1px solid #ddd;
-            color: #555;
-            font-size: 0.95em;
-            padding: 30px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
+        background-color: #ffffff;
+        border-top: 1px solid #ddd;
+        color: #555;
+        font-size: 0.95em;
+        padding: 30px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
         }
 
-        .footer-left,
-        .footer-right {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .footer-logos-left,
+        .footer-logos-right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex: 1;
+        justify-content: center;
         }
 
-        .footer-left img,
-        .footer-right img {
-            height: auto;
-            max-height: 80px;
-            width: auto;
+        .footer-logos-left img,
+        .footer-logos-right img {
+        height: auto;
+        max-height: 90px;
+        width: auto;
         }
 
-        .footer-center {
+        .footer-authors {
+        flex: 2;
+        min-width: 300px;
+        text-align: center;
+        }
+
+        .footer-authors p {
+        margin: 4px 0;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+        footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        }
+
+        .footer-authors {
+        order: -1;
+        width: 100%;
+        }
+
+        .footer-logos-left,
+        .footer-logos-right {
+        justify-content: center;
+        margin-top: 10px;
+        }
+        }
+
+
+        @media screen and (max-width: 768px) {
+        .page-content {
+        width: 90%;
+        }
+
+        .image-text-row {
+        flex-direction: column-reverse;
+        }
+
+        .abstract-column,
+        .image-text-row figure {
+        max-width: 100%;
+        }
+
+        .side-by-side-gallery {
+        flex-direction: column;
+        }
+        }
+        .author-tagline {
             text-align: center;
-            flex-grow: 1;
-        }
-
-        .footer-center p {
-            margin: 4px 0;
-        }
+            font-size: 0.9em;
+            color: #999;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            }
 
         .container {
             display: flex;
             justify-content: center;
             gap: 80px;
+            margin-top: 60px;
             margin-bottom: 60px;
             flex-wrap: wrap;
         }
@@ -186,7 +239,7 @@
 
             .card {
                 width: 65%;
-                height: 10%;
+                height: 0%;
             }
 
             .card img {
@@ -210,18 +263,7 @@
             }
 
             .subtitle {
-                font-size: 1em;
-            }
-
-            footer {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .footer-left,
-            .footer-right {
-                justify-content: center;
+                font-size: 0.9em;
             }
         }
     </style>
@@ -229,8 +271,9 @@
 <body>
 
     <h1>Spanish SER and Empathic HCI Research</h1>
-    <hr class="soft-divider">
     <p class="subtitle">Explore our recent advancements in SER using PTMs with Multitask Learning, and our end-to-end HCI system.</p>
+    <hr class="soft-divider">
+    <p class="author-tagline">By: Alex Mares</p>
 
     <div class="container">
         <div class="card">
@@ -259,35 +302,37 @@
     <div class="related-section">
         <h2>Related Research Paper</h2>
         <a href="https://www.mdpi.com/2076-3417/15/8/4340" target="_blank">
-            Advancing Spanish Speech Emotion Recognition: A Comprehensive Benchmark of Pre-Trained Models
+            Advancing Spanish Speech Emotion Recognition: MDPI
         </a>
     </div>
 
     <footer>
-        <div class="footer-left">
-            <img src="assets\uv.jpg" alt="UV Logo" style="height: 80px;">
-            <img src="assets\inaoe.png" alt="INAOE Logo"  style="height: 80px;">
-            <img src="assets\fie.png" alt="FIE Logo" style="height: 80px;">
-        </div>
+      <div class="footer-logos-left">
+        <img src="assets/uv.jpg" alt="UV Logo">
+        <img src="assets/inaoe.png" alt="INAOE Logo">
+        <img src="assets/fie.png" alt="FIE Logo">
+      </div>
 
-        <div class="footer-center">
-            <p><strong>Author:</strong> Alex Mares
-            <a href="https://www.linkedin.com/in/alxmrs/" target="_blank" title="LinkedIn">🔗</a>
-            <p><strong>Collaborating Researchers:</strong></p>
-            <p>Gerardo Díaz Arango
-            <a href="https://www.researchgate.net/profile/Gerardo-Diaz-Arango" target="_blank" title="ResearchGate">🔗</a>
-            </p>
-            <p>Jorge Eduardo Pérez-Jácome Friscione
-            <a href="mailto:jperezjacome@uv.mx" title="Email">📧</a>
-            </p>
-            <p>Héctor Vázquez Leal
-                <a href="https://www.researchgate.net/profile/Hector-Vazquez-Leal" target="_blank" title="ResearchGate">🔗</a>
-            </p>
-        </div>
+      <div class="footer-authors">
+        <p><strong>Author:</strong> Alex Mares
+          <a href="https://www.linkedin.com/in/alxmrs/" target="_blank" title="LinkedIn">🔗</a>
+        </p>
+        <p><strong>Collaborating Researchers:</strong></p>
+        <p>Gerardo Díaz Arango
+          <a href="https://www.researchgate.net/profile/Gerardo-Diaz-Arango" target="_blank" title="ResearchGate">🔗</a>
+        </p>
+        <p>Jorge Eduardo Pérez-Jácome Friscione
+          <a href="mailto:jperezjacome@uv.mx" title="Email">📧</a>
+        </p>
+        <p>Héctor Vázquez Leal
+          <a href="https://www.researchgate.net/profile/Hector-Vazquez-Leal" target="_blank" title="ResearchGate">🔗</a>
+        </p>
+      </div>
 
-        <div class="footer-right">
-            <img src="assets\secihti.png" alt="SECIHTI Logo" style="height: 30px;">
-        </div>
+      <div class="footer-logos-right">
+        
+        <img src="assets/secihti.png" alt="SECIHTI Logo" style="max-height: 40px;">
+      </div>
     </footer>
 
 </body>
